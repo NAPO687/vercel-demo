@@ -7,6 +7,14 @@
 </head>
 <body>
     <h1>Hello, World!</h1>
-    <p>Deploy to Vercel</p>
+    <p id="panel">Deploy to Vercel</p>
+    <textarea id="ta"></textarea>
+    <script>
+        const ta = document.getElementById("ta");
+        const panel = document.getElementById("panel");
+        ta.addEventListener('input', e => {
+            panel.textContent = e.target.value;
+        });
+    </script>
 </body>
 </html>
